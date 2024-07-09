@@ -1,0 +1,106 @@
+/* DirectoryTree.css */
+
+.directory-tree-container {
+    float: left;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f0f4f8; /* Light blue background */
+    transition: background-color 0.3s ease;
+  }
+  
+  .directory-tree-container:hover {
+    background-color: #e9eff4; /* Slightly darker blue on hover */
+  }
+  
+  .directory-tree {
+    list-style-type: none;
+    padding-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .directory-item {
+    margin-left: 10px;
+  }
+  
+  .directory-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #1a73e8; /* Google Blue */
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .directory-toggle:hover {
+    background-color: #d2e3fc; /* Light hover background */
+    color: #174ea6; /* Darker blue on hover */
+  }
+  
+  .directory-toggle.expanded::before {
+    /* content: "▼ "; */
+    transition: transform 0.3s ease;
+  }
+  
+  .directory-toggle.collapsed::before {
+    /* content: "► "; */
+    transition: transform 0.3s ease;
+  }
+  
+  .directory-icon {
+    margin-right: 8px;
+  }
+  
+  .super-folder-icon {
+    color: #ff8c00; /* Dark orange */
+  }
+  
+  .sub-folder-icon {
+    color: #1a73e8; /* Google Blue */
+  }
+  
+  .file-icon {
+    color: #34a853; /* Green */
+  }
+  
+  .sub-directory {
+    margin-left: 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .sub-directory.expanded {
+    max-height: 1000px; /* Arbitrary large value to allow expansion */
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .directory-tree-container {
+      max-width: 100%;
+      height: auto;
+      border-right: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .directory-toggle {
+      font-size: 12px;
+    }
+  
+    .sub-directory {
+      margin-left: 15px;
+    }
+  }
+  

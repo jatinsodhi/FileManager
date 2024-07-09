@@ -1,0 +1,18 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .breadcrumbs span {
+    cursor: pointer;
+    color: #007bff;
+    margin-right: 5px;
+  }
+  
+  .breadcrumbs span:hover {
+    text-decoration: underline;
+  }
+  

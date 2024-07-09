@@ -1,0 +1,128 @@
+.directory-contents {
+  width: 70%; /* Adjust to occupy remaining space */
+  float: left;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 10px; /* Optional: Adjust padding */
+  box-sizing: border-box;
+}
+
+.directory-contents h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.directory-contents .folder-item,
+.directory-contents .file-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.directory-contents .folder-item:hover,
+.directory-contents .file-item:hover {
+  background-color: #f0f0f0;
+}
+
+.directory-contents .item-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.directory-contents .item-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.directory-contents .directory-contents-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.directory-contents .directory-contents-table th,
+.directory-contents .directory-contents-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.directory-contents .directory-contents-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.directory-contents .directory-contents-table .name-column {
+  width: 40%;
+}
+
+.directory-contents .directory-contents-table .created-at-column,
+.directory-contents .directory-contents-table .last-modified-column {
+  width: 20%;
+}
+
+.directory-contents .directory-contents-table .type-column,
+.directory-contents .directory-contents-table .size-column {
+  width: 10%;
+}
+
+.directory-contents .select-column {
+  width: 5%;
+}
+
+.context-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.context-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.context-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+
+form {
+  display: inline;
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.directory-contents-table th,
+.directory-contents-table td {
+  cursor: pointer;
+}
+
+.directory-contents-table th .sort-icon {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu ul li.disabled {
+  color: grey;
+  pointer-events: none;
+}
